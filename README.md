@@ -39,3 +39,56 @@ Example `.addin` (edit the Assembly path):
     <VendorDescription>MRevit Tools</VendorDescription>
   </AddIn>
 </RevitAddIns>
+
+
+### 3) Icons
+If `App.cs` loads icons by file name, keep icons next to the DLL:
+
+- `icon32.png`
+- `icon_sortmark32.png`
+- `icon_autoannotate32.png`
+- `icon_ifc_platebolt32.png`
+- `icon_viewrange32.png`
+
+### 4) Run
+Start Revit → you should see the **MRevit** ribbon tab.
+
+---
+
+## Commands (What each one does)
+
+### Rebar Panel
+
+#### Select Host Rebars
+Pick a host element → selects all hosted rebars.
+
+#### Sort & Mark (Hosted Rebars)
+Pick a host → sort by up to 3 parameters (Length/Diameter/Shape) → writes sequential numbers to **Mark**.
+
+---
+
+### Annotation Panel
+
+#### Auto Annotate (Section/Elevation)
+Pick a Section/Elevation (viewport or active view) → choose categories and tag types → places tags for visible elements.
+
+---
+
+### IFC Panel
+
+#### IFC Beams
+Converts IfcBeam into native Revit Structural Framing (requires at least one beam type loaded).
+
+#### IFC Columns
+Converts IfcColumn into native Revit Structural Columns (requires at least one column type loaded).
+
+#### IFC Plates + Bolts
+Recreates plates/bolts as **Generic Model DirectShape** elements.  
+If Revit uses a cached `.RVT` link, the tool asks you to pick the original `.ifc`.
+
+---
+
+### View Tools Panel
+
+#### View Range 3D Box
+In a Plan view with Crop Box enabled: creates a 3D section box using XY from Crop Box and Z from View Range and shows colored planes for Top/Cut/Bottom/ViewDepth.
