@@ -92,4 +92,5 @@ If Revit uses a cached `.RVT` link, the tool asks you to pick the original `.ifc
 
 #### View Range 3D Box
 In a Plan view with Crop Box enabled: creates a 3D section box using XY from Crop Box and Z from View Range and shows colored planes for Top/Cut/Bottom/ViewDepth.
+
 ![View Range Visualizer](assets/ViewRangeVisualizer.png)
